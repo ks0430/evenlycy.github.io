@@ -1,0 +1,3 @@
+[submodule "simple-js-responsive-blog"]
+	path = simple-js-responsive-blog
+	url = git@github.com:ks0430/simple-js-responsive-blog.git
