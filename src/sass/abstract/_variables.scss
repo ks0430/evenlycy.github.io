@@ -1,14 +1,20 @@
 
 // Color define
 $red_chiaki: #e84a5f;
+$indigo_primary: rgb(49,66,153);
 // z-index-manager
 $index-container-border: 2000;
-// Gutter between header footer & containerBorder
+// border with
+$width-container-border: 3rem;
+// Gutter between container & page
+$gutter-container:  2rem;
 
 :root {
-    --color-primary:#{$red_chiaki};
+    --color-primary:#{$indigo_primary};
 
     --index-container-border:#{$index-container-border};
+    --width-border: #{$width-container-border};
+    --gutter-container: #{$width-container-border + $gutter-container};
 }
 
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <section className="home">
         <div className="container">
             <div className="row no-gutters">
                 <div className="col-sm">Test1</div>
@@ -11,7 +11,7 @@ export default class Home extends Component {
                 <div className="col-sm">Test1</div>
             </div>
         </div>
-      </div>
+      </section>
     )
   }
 }

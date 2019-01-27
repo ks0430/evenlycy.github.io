@@ -1,0 +1,12 @@
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+// Add if bootstrap's breakpoint is not effect
+@mixin respond($breakpoint) {
+  @if($breakpoint == phone) {
+    @media (max-width: 37.5rem) {
+      @content;
+    }
+  }
+}

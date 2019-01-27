@@ -1,0 +1,11 @@
+.social-link {
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    height: 2rem;
+    width: 2rem;
+  }
+}
