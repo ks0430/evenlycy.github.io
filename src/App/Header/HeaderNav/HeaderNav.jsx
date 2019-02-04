@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
-import _ from "lodash";
 import "./HeaderNav.scss";
+import Button from '../../Common/Button/Button';
 
 export default class HeaderNav extends Component {
 
@@ -13,6 +12,15 @@ export default class HeaderNav extends Component {
     {
       path: "portfolio",
       value: "Portfolio"
+    },
+    {
+      path: "blog",
+      value: "Blog"
+    },
+    {
+      path: "contact",
+      value: "Contact",
+      style: "border"
     }
   ]
 
@@ -20,11 +28,15 @@ export default class HeaderNav extends Component {
     return (
       <React.Fragment>
           <ul className="headerNav ml-auto">
-            <li className="headerNav__item m-3">
-              <Link to="home">Home</Link>
+          {this.navs.map(item => 
+            <li className="headerNav__item">
+              <Button 
+                btnStyle={item["style"]}
+                to={item.path}
+                value={item.value}
+              />
             </li>
-            <li className="headerNav__item m-3">item2</li>
-            <li className="headerNav__item m-3">item3</li>
+          )}
           </ul>
       </React.Fragment>
     )

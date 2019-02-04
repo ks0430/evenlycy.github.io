@@ -1,8 +1,18 @@
-$gutter: 2rem;
+@import "../../../sass/main.scss";
+
+// $gutter: 0rem;
 
 .headerNav {
     position: relative;
     display: flex;
     list-style: none;
     
+    // & > :not(:last-child) {
+    //     margin-right: $gutter;
+    // }
+    
+
+    &--border {
+        border: var(--color-navlink-border);
+    }
 }

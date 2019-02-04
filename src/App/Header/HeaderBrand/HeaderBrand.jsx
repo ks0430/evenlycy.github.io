@@ -3,10 +3,10 @@ import "./HeaderBrand.scss";
 
 const HeaderBrand = (props) => {
   return (
-    <div className="headerBrand">
-        <h1>Evelyn Chu</h1>
-    </div>  
+    <h1 className="headerBrand">
+        Evelyn Chu
+    </h1>  
   )
 }
 
-export default HeaderBrand
+export default HeaderBrand;

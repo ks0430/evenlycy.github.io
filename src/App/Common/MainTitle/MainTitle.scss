@@ -1,0 +1,15 @@
+.main-title {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // @include border(red);
+
+  &__title {
+    font-size: 7rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 700;
+  }
+}

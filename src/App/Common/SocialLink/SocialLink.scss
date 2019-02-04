@@ -1,11 +1,18 @@
+$imgSize: 1.3rem;
+
 .social-link {
+
+  & > :not(:last-child) {
+    margin-right: 1.3rem;
+  }
   &__item {
     display: flex;
     align-items: center;
   }
 
-  &__img {
-    height: 2rem;
-    width: 2rem;
+  &__icon {
+    height: $imgSize;
+    width: $imgSize;
+    fill: var(--color-dark-grey);
   }
 }

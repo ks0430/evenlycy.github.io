@@ -1,5 +1,13 @@
+@import "../../sass/main.scss";
+
 $gutter: var(--gutter-container);
 
 .header {
+    position: fixed;
+    top:0;
+    width: 100%;
     padding: $gutter;
+    padding-bottom: 0;
+    background-color: white;
+    // @include border(blue);
 }

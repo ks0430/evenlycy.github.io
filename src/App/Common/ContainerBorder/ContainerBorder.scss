@@ -1,6 +1,6 @@
 
 // Line width
-$line-width: var(--width-border);
+$line-width: var(--width-container-border);
 
 .container-border {
 
@@ -8,7 +8,7 @@ $line-width: var(--width-border);
 
     &__line {
         background-color: var(--color-primary);
-        position: absolute;
+        position: fixed;
     }
 
     &--top {

@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="footer d-flex align-items-center">
-        <div className="copyright mr-auto">2019 Designed By Evelyn Chu.</div>
+        <div className="copyright mr-auto">&copy; 2019 Designed By Evelyn Chu.</div>
         <SocialLink />
       </footer>
     )

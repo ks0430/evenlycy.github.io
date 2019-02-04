@@ -1,12 +1,18 @@
 @import"../../sass/main.scss";
 
-$gutter : var(--gutter-container);
-
+$gutter: var(--gutter-container);
 
 .footer {
     padding: $gutter;
+    padding-top: 2rem;
     position: fixed;
     bottom: 0;
     width: 100%;
-    @include border(blue);
+    background-color: white;
+    // @include border(blue);
+
+    .copyright {
+        font-size: 1.1rem;
+        color: var(--color-light-grey-2);
+    }
 }
