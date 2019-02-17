@@ -29,7 +29,7 @@ export default class HeaderNav extends Component {
       <React.Fragment>
           <ul className="headerNav ml-auto">
           {this.navs.map(item => 
-            <li className="headerNav__item">
+            <li className="headerNav__item" key={item.path}>
               <Button 
                 btnStyle={item["style"]}
                 to={item.path}

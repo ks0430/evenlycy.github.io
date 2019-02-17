@@ -25,7 +25,7 @@ const SocialLink = () => {
   return (
     <ul className="social-link d-flex">
     {socialLinkData.map(item => 
-      <li className="social-link__item">
+      <li className="social-link__item" key={item.iconName}>
         <a href={item.iconLink}>
           <svg className="social-link__icon">
             <use xlinkHref={`${sprite}#icon-${item.iconName}`} />

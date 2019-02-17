@@ -26,7 +26,6 @@ const getBtnStyle = (style) => {
       className += " button--link";
       break;
    }
-   console.log("classname is", className);
    return className;
 }
 

@@ -3,7 +3,7 @@ import Page from '../Page';
 import MainTitle from '../../Common/MainTitle/MainTitle';
 import "./Home.scss";
 
-export default class Home extends Page {
+export default class Home extends Component {
   render() {
     return (
       <section className="home page">

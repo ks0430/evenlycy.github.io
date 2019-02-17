@@ -1,0 +1,10 @@
+.group-item-anim {
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    opacity: 0;
+    transition: all 500ms;
+  }
+}
