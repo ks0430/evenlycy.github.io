@@ -7,10 +7,11 @@ import "./App.scss";
 
 class App extends Component {
   render() {
+    const { location } = this.props;
     return (
       <div className="app">
         <Header />
-        <Main />
+        <Main location={location} />
         <Footer />
         <ContainerBorder />
       </div>
