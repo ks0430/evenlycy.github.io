@@ -1,0 +1,6 @@
+$max-width: var(--width-body-max);
+
+.main-container {
+  max-width: $max-width;
+  margin: 0 auto;
+}

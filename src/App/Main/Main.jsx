@@ -3,6 +3,8 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import Home from '../Page/Home/Home';
 import Portfolio from '../Page/Portfolio/Portfolio';
 
+import "./Main.scss";
+
 export default class Main extends Component {
   render() {
     return (

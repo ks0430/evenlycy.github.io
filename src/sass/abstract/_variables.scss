@@ -10,8 +10,10 @@ $color-dark-grey-54: rgb(54,54,54);
 $index-container-border: 2000;
 // border with
 $width-container-border: 2.5rem;
-// Gutter between container & page
+// Gutter between body & border
 $gutter-container:  2.5rem;
+// body max width
+$width-body-max: 107rem;
 
 
 :root {
@@ -23,6 +25,7 @@ $gutter-container:  2.5rem;
     --index-container-border:#{$index-container-border};
     --width-container-border: #{$width-container-border};
     --gutter-container: #{$width-container-border + $gutter-container};
+    --width-body-max: #{$width-body-max};
     // color
     --color-light-grey:#{$color-light-grey-221};
     --color-light-grey-2:#{$color-light-grey-999};
