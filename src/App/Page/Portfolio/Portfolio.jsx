@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Work from './Work/Work';
 import MainTitle from '../../Common/MainTitle/MainTitle';
 
 export default class Portfolio extends Component {
@@ -9,6 +10,7 @@ export default class Portfolio extends Component {
           title="Portfolio"
           path="Home / Portfolio"
         />
+        <Work />
       </section>
     )
   }
