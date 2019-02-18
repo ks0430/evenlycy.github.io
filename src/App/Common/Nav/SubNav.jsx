@@ -1,10 +1,10 @@
 import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-
+import "./SubNav.scss";
 
 const SubNav = ({onClick}) => {
   return (
-    <Nav className="sub-nav">
+    <Nav className="sub-nav mb-5">
       <NavItem className="sub-nav__item">
         <NavLink className="sub-nav__link" onClick={onClick} href="#">Link1</NavLink>
       </NavItem>
