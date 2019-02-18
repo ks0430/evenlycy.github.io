@@ -1,0 +1,18 @@
+.subnav {
+  margin: 3rem 0;
+
+  & >:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__item > &__link {
+
+    &:visited,&:link{
+      padding: 0;
+    }
+
+    &:hover, &:active {
+      color: currentColor;
+    }
+  }
+}
