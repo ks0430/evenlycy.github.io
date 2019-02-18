@@ -1,14 +1,15 @@
 
-// Line width
+// variables
 $line-width: var(--width-container-border);
+$index-border: var(--index-container-border);
+$bgColor: var(--color-primary);
+
 
 .container-border {
-
-    z-index: var(--container-border);
-
     &__line {
-        background-color: var(--color-primary);
+        background-color: $bgColor;
         position: fixed;
+        z-index: $index-border;
     }
 
     &--top {

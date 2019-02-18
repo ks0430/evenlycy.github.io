@@ -7,7 +7,8 @@ $color-light-grey-221: rgb(221,221,221);
 $color-light-grey-999: #999;
 $color-dark-grey-54: rgb(54,54,54);
 // z-index-manager
-$index-container-border: 2000;
+$index-2000: 2000;
+$index-1000: 1000;
 // border with
 $width-container-border: 2.5rem;
 // Gutter between body & border
@@ -20,9 +21,11 @@ $width-body-max: 107rem;
     // Color primary
     --color-primary:#{$indigo_primary};
 
-
-    // Layout gutter
-    --index-container-border:#{$index-container-border};
+    // index
+    --index-container-border:#{$index-2000};
+    --index-header: #{$index-1000};
+    --index-footer: #{$index-1000};
+    // gutter & width
     --width-container-border: #{$width-container-border};
     --gutter-container: #{$width-container-border + $gutter-container};
     --width-body-max: #{$width-body-max};

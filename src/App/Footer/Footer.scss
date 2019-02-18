@@ -1,7 +1,7 @@
 @import"../../sass/main.scss";
 
 $gutter: var(--gutter-container);
-
+$index-footer: var(--index-footer);
 .footer {
     padding: $gutter;
     padding-top: 2rem;
@@ -9,6 +9,8 @@ $gutter: var(--gutter-container);
     bottom: 0;
     width: 100%;
     background-color: white;
+    z-index: $index-footer;
+    
     // @include border(blue);
 
     .copyright {
