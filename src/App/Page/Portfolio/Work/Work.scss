@@ -20,3 +20,16 @@
     }
   }
 }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  
+  
+  &__item {
+    background-color: aqua;
+  }
+}
