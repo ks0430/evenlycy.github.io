@@ -1,9 +1,11 @@
-$imgSize: 1.3rem;
+
+$imgSize: 1.5rem;
+$iconColor: var(--color-dark-grey);
 
 .social-link {
 
   & > :not(:last-child) {
-    margin-right: 1.3rem;
+    margin-right: 1.6rem;
   }
   &__item {
     display: flex;
@@ -13,6 +15,6 @@ $imgSize: 1.3rem;
   &__icon {
     height: $imgSize;
     width: $imgSize;
-    fill: var(--color-dark-grey);
+    fill: $iconColor;
   }
 }

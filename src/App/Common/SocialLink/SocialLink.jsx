@@ -1,7 +1,4 @@
 import React from 'react';
-import twitter from '../../../images/icons/twitter.svg';
-import instagram from '../../../images/icons/instagram.svg';
-import facebook from '../../../images/icons/facebook.svg';
 import sprite from "../../../images/icons/sprite.svg";
 import './SocialLink.scss';
 
@@ -9,16 +6,20 @@ import './SocialLink.scss';
 const socialLinkData = [
   {
     iconName: "facebook",
-    iconLink: "#",
+    iconLink: "https://www.facebook.com/EvelynChu0430",
   },
   {
-    iconName: "instagram",
-    iconLink: "#",
+    iconName: "linkedin",
+    iconLink: "https://www.linkedin.com/in/evelyn-chu/",
+  },
+  {
+    iconName: "github",
+    iconLink: "https://github.com/ks0430",
   },
   {
     iconName: "twitter",
-    iconLink: "#",
-  },
+    iconLink: "https://twitter.com/evelyn_0430",
+  }
 ]
 
 const SocialLink = () => {
@@ -26,7 +27,7 @@ const SocialLink = () => {
     <ul className="social-link d-flex">
     {socialLinkData.map(item => 
       <li className="social-link__item" key={item.iconName}>
-        <a href={item.iconLink}>
+        <a href={item.iconLink} target="_blank">
           <svg className="social-link__icon">
             <use xlinkHref={`${sprite}#icon-${item.iconName}`} />
           </svg>
