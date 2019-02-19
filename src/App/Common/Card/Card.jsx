@@ -1,10 +1,10 @@
 import React from 'react';
 import './Card.scss';
 
-const WorkCard = ({imgUrl, title, type}) => {
+const WorkCard = ({imgUrl, title, type, onClick}) => {
   return (
     <div className="flex-card" >
-      <figure className="flex-card__figure mb-4">
+      <figure className="flex-card__figure mb-4" onClick={onClick}>
         <img className="flex-card__img" src={imgUrl} alt=""/>
         <figcaption className="flex-card__figcaption"></figcaption>
       </figure>

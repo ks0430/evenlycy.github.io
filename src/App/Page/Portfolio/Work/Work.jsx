@@ -9,10 +9,17 @@ export default class Work extends Component {
 
   state = {
     worksData: [],
+    isPopupOn: true,
   }
 
   onClick = () => {
     console.log("click!");
+  }
+
+  popupToggleHandler = () => {
+    this.setState(preState => ({
+      isPopupOn: !preState.isPopupOn
+    }))
   }
 
   componentDidMount() {
@@ -34,12 +41,13 @@ export default class Work extends Component {
                 imgUrl= { work.imgUrl }
                 type={ work.type }
                 title={ work.title }
+                onClick={this.popupToggleHandler}
               />
             </div>
           )
         }
         </div>
-        <Popup isOn={true}/>
+        <Popup isOn={this.state.isPopupOn} onToggle={this.popupToggleHandler} />
       </div>
     )
   }

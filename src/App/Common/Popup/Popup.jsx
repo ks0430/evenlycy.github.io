@@ -5,13 +5,14 @@ import "./Popup.scss";
 class Popup extends Component {
 
   render() {
-    const {isOn, onToggle} = this.props;
+    const {isOn, onToggle, data} = this.props;
+    // const {title, imgUrl, type, text} = data;
     return(
       <React.Fragment>
       {
         !isOn ? null :       
           <div className="popup">
-            <div className="popup__bg"></div>
+            <div className="popup__bg" onClick={onToggle}></div>
             <div className="popup__body">
               <button className="popup__close" onClick={onToggle}></button>
               <img className="popup__img mb-4" src="https://images.unsplash.com/photo-1506994011460-5482746d30a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt=""/>
