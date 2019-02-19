@@ -5,16 +5,19 @@ import SubNav from '../../../Common/Nav/SubNav';
 import SubTitle from '../../../Common/MainTitle/SubTitle';
 import Popup from '../../../Common/Popup/Popup';
 import {getWroks} from '../../../../services/workService';
+import {getTypesData} from '../../../../services/typeService';
 export default class Work extends Component {
 
   state = {
     worksData: [],
+    typesData:[],
     isPopupOn: false,
-    currentWork: ""
+    currentWork: "",
+    currentTypeID:""
   }
 
-  onClick = () => {
-    console.log("click!");
+  onClick = (item) => {
+    this.setState({currentTypeID:item.id});
   }
 
   popupToggleHandler = () => {
@@ -34,16 +37,39 @@ export default class Work extends Component {
     const worksData = getWroks();
     console.log(worksData);
     this.setState({worksData});
+
+    const typesData = getTypesData();
+    const typesDataAddAll = [{id:"", name:"All"}, ...typesData];
+    this.setState({typesData: typesDataAddAll});
   }
 
+  getFilteredWorksData = () => {
+    const {worksData, currentTypeID} = this.state;
+
+    const filteredWorksData = currentTypeID === "" ? 
+    worksData:
+    worksData.filter(work => {
+      let isExist = work.tags.find(tag => tag.id === currentTypeID)? true : false;
+      return isExist;
+    })
+
+    return filteredWorksData;
+  }
+
+
   render() {
-    const {worksData} = this.state;
+
+
+    // Filter works by current type
+    const filteredWorksData = this.getFilteredWorksData();
+
+
     return (
       <div className="work">
         <SubTitle>Recent Works</SubTitle>
-        {/* <SubNav onClick={this.onClick} /> */}
+        <SubNav data={this.state.typesData} onClick={this.onClick} />
         <div className="work-grid">
-          {worksData.map(work =>           
+          {filteredWorksData.map(work =>           
             <div key={work.id} className="work-grid__item">
               <Card 
                 imgUrl= { work.imgUrl }

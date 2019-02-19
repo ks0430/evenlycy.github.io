@@ -1,7 +1,7 @@
 $gridGap: 3rem;
 
 .work {
-  height: 200rem;
+  padding-bottom: 30rem;
 }
 
 
@@ -12,8 +12,4 @@ $gridGap: 3rem;
   grid-column-gap: $gridGap;
   grid-row-gap: $gridGap;
   
-  
-  &__item {
-    // background-color: aqua;
-  }
 }
