@@ -31,7 +31,7 @@ $bgColor: var(--color-dark-grey-2);
     background-color: white;
     padding: 1rem;
     width: 52rem;
-    transition: all 500ms;
+    animation: fadeInDown 400ms;
   }
 
   &__close {
@@ -108,4 +108,15 @@ $bgColor: var(--color-dark-grey-2);
   &__button {
     padding: 3rem;
   }
+
+  &-enter {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    opacity: 1;
+    transition: all 150ms;
+  }
+
 }
+
