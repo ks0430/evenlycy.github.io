@@ -9,7 +9,8 @@ export default class Work extends Component {
 
   state = {
     worksData: [],
-    isPopupOn: true,
+    isPopupOn: false,
+    currentWork: ""
   }
 
   onClick = () => {
@@ -20,6 +21,13 @@ export default class Work extends Component {
     this.setState(preState => ({
       isPopupOn: !preState.isPopupOn
     }))
+  }
+
+  workToggleHandler = (work) => {
+    const preWork = this.state.currentWork;
+    this.setState({
+      currentWork: work
+    })
   }
 
   componentDidMount() {
@@ -41,13 +49,13 @@ export default class Work extends Component {
                 imgUrl= { work.imgUrl }
                 type={ work.type }
                 title={ work.title }
-                onClick={this.popupToggleHandler}
+                onClick={() => { this.workToggleHandler(work); this.popupToggleHandler(); }}
               />
             </div>
           )
         }
         </div>
-        <Popup isOn={this.state.isPopupOn} onToggle={this.popupToggleHandler} />
+        <Popup isOn={this.state.isPopupOn} onToggle={this.popupToggleHandler} data={this.state.currentWork} />
       </div>
     )
   }
