@@ -4,14 +4,13 @@ import "./Button.scss";
 
 
 const Button = (props) => {
-  const {children, btnStyle, to, value} = props; 
+  const {children, btnStyle, to, value, onClick} = props; 
   // get class name
   const classStyle = getBtnStyle(btnStyle);
   const link = to ? <Link to={to}>{value}</Link>  : null;
   return (
-    <button className={classStyle}>
-      {children}
-      {link}
+    <button className={classStyle} onClick={onClick}>
+      {link ? link : children}
     </button>
   )
 }

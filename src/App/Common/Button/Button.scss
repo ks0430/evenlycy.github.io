@@ -4,6 +4,10 @@
 .button {
 
   background-color: transparent;
+  display: block;
+  padding: .8rem 3rem;
+  transition: all .3s;
+  
   & a:link,
   & a:hover {
     display: block;
@@ -22,6 +26,12 @@
       color: white;
       background-color: var(--color-primary);
     }
+  }
+
+  &--border:hover{
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-primary);
   }
 
 }

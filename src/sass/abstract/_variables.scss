@@ -2,14 +2,19 @@
 // Color define
 $red_chiaki: #e84a5f;
 $indigo_primary: rgb(49,66,153);
+
 // Navbar link border color
 $color-light-grey-221: rgb(221,221,221);
 $color-light-grey-999: #999;
 $color-dark-grey-54: rgb(54,54,54);
+$color-dark-grey-11: rgb(11, 11, 11);
 $color-yellow-light-237: rgb(237, 229, 116);
+
 // z-index-manager
+$index-3000: 3000;
 $index-2000: 2000;
 $index-1000: 1000;
+
 // border with
 $width-container-border: 2.5rem;
 // Gutter between body & border
@@ -26,6 +31,7 @@ $width-body-max: 90rem;
     --index-container-border:#{$index-2000};
     --index-header: #{$index-1000};
     --index-footer: #{$index-1000};
+    --index-popup: #{$index-3000};
     // gutter & width
     --width-container-border: #{$width-container-border};
     --gutter-container: #{$width-container-border + $gutter-container};
@@ -34,6 +40,7 @@ $width-body-max: 90rem;
     --color-light-grey:#{$color-light-grey-221};
     --color-light-grey-2:#{$color-light-grey-999};
     --color-dark-grey:#{$color-dark-grey-54};
+    --color-dark-grey-2: #{$color-dark-grey-11};
     --color-yellow-light-1: #{$color-yellow-light-237};
     
 }

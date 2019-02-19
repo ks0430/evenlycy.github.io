@@ -4,7 +4,6 @@ import {MemoryRouter, HashRouter, BrowserRouter} from 'react-router-dom'
 import { Switch, Route } from 'react-router-dom';
 import App from './App/App';
 import * as serviceWorker from './serviceWorker';
-import "bootstrap/dist/css/bootstrap.css";
 import "./sass/main.scss";
 
 // Link for examples
