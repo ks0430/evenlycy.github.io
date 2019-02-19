@@ -1,13 +1,14 @@
 .sub-nav {
 
   & >:not(:last-child) {
-    margin-right: 2rem;
+    margin-right: 4rem;
   }
 
   &__item > &__link {
 
     &:visited,&:link{
       padding: 0;
+      font-weight: 400;
     }
 
     &:hover, &:active {
