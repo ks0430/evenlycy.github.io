@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import "./HeaderNav.scss";
 import Button from '../../Common/Button/Button';
+import { Link } from 'react-router-dom';
 
 export default class HeaderNav extends Component {
-
   navs = [
     {
       path: "home",
@@ -32,9 +32,9 @@ export default class HeaderNav extends Component {
             <li className="headerNav__item" key={item.path}>
               <Button 
                 btnStyle={item["style"]}
-                to={item.path}
-                value={item.value}
-              />
+              >
+                <Link to={item.path}>{item.value}</Link>
+              </Button>
             </li>
           )}
           </ul>
