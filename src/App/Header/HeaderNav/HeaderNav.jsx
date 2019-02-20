@@ -14,10 +14,6 @@ export default class HeaderNav extends Component {
       value: "Portfolio"
     },
     {
-      path: "blog",
-      value: "Blog"
-    },
-    {
       path: "contact",
       value: "Contact",
       style: "border"

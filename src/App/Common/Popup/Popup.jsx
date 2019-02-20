@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import Button from '../Button/Button';
 import { CSSTransition } from 'react-transition-group';
+import {Link } from 'react-router-dom';
 import "./Popup.scss";
 
 class Popup extends Component {
 
   render() {
     const {isOn, onToggle, data} = this.props;
-    const {title, imgUrl, type, text} = data;
+    const {title, imgUrl, type, text, link} = data;
     return(
       <React.Fragment>
         <CSSTransition in={isOn} timeout={150} classNames="popup">
@@ -22,7 +23,11 @@ class Popup extends Component {
                     <p className="popup__type">{ type }</p>
                     <h3 className="popup__title mb-4">{ title }</h3>
                     <p className="popup__text mb-5">{ text }</p>
-                    <Button className="popup__button" btnStyle="border" onClick={onToggle}>View Project</Button>
+                    <Button className="popup__button" btnStyle="border" >
+                      <a href={link} target="_blank" >
+                        View Project
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>  
