@@ -7,3 +7,29 @@ $gridGap: 3rem;
   grid-column-gap: $gridGap;
   grid-row-gap: $gridGap;
 }
+
+
+.work-grid-anim {
+  transition: all 500ms;
+  &-enter {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+
+  &-enter-active {
+    transform: translate(0);
+    opacity: 1;
+    transition: all 500ms;
+  }
+
+  &-exit {
+    transform: translate(0);
+    opacity: 1;
+  }
+
+  &-exit-active {
+    transform: translate(100%);
+    opacity: 0;
+    transition: all 500ms;
+  }
+}

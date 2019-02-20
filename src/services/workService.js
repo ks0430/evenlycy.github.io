@@ -30,6 +30,40 @@ const worksData = [
     ],
     imgUrl:"https://images.unsplash.com/photo-1424274414501-ce96d567b5c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+  },
+  {
+    id:uuid(),
+    title:"Weather App",
+    type:"web app",
+    tags:[
+      {
+        id: "65611c7c-3454-11e9-b210-d663bd873d93",
+        name: "react"
+      },
+      {
+        id: "65611f74-3454-11e9-b210-d663bd873d93",
+        name: "nodejs"
+      },
+    ],
+    imgUrl:"https://images.unsplash.com/photo-1424274414501-ce96d567b5c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+  },
+  {
+    id:uuid(),
+    title:"Weather App",
+    type:"web app",
+    tags:[
+      {
+        id: "65611c7c-3454-11e9-b210-d663bd873d93",
+        name: "react"
+      },
+      {
+        id: "65611f74-3454-11e9-b210-d663bd873d93",
+        name: "nodejs"
+      },
+    ],
+    imgUrl:"https://images.unsplash.com/photo-1424274414501-ce96d567b5c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
   }
 ]
 
