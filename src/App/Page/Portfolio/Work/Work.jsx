@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Work.scss';
-import Card from '../../../Common/Card/Card';
 import SubNav from '../../../Common/Nav/SubNav';
 import SubTitle from '../../../Common/MainTitle/SubTitle';
 import Popup from '../../../Common/Popup/Popup';
+import WorkGrid from './WorkGrid';
 import {getWroks} from '../../../../services/workService';
 import {getTypesData} from '../../../../services/typeService';
 export default class Work extends Component {
@@ -26,7 +26,7 @@ export default class Work extends Component {
     }))
   }
 
-  workToggleHandler = (work) => {
+  currentWorkToggleHandler = (work) => {
     const preWork = this.state.currentWork;
     this.setState({
       currentWork: work
@@ -68,19 +68,11 @@ export default class Work extends Component {
       <div className="work">
         <SubTitle>Recent Works</SubTitle>
         <SubNav data={this.state.typesData} onClick={this.onClick} />
-        <div className="work-grid">
-          {filteredWorksData.map(work =>           
-            <div key={work.id} className="work-grid__item">
-              <Card 
-                imgUrl= { work.imgUrl }
-                type={ work.type }
-                title={ work.title }
-                onClick={() => { this.workToggleHandler(work); this.popupToggleHandler(); }}
-              />
-            </div>
-          )
-        }
-        </div>
+        <WorkGrid 
+          filteredWorksData={filteredWorksData} 
+          currentWorkToggleHandler={this.currentWorkToggleHandler} 
+          popupToggleHandler={this.popupToggleHandler} 
+        />
         <Popup isOn={this.state.isPopupOn} onToggle={this.popupToggleHandler} data={this.state.currentWork} />
       </div>
     )
