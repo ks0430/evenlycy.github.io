@@ -1,0 +1,40 @@
+
+// variables
+$line-width: var(--width-container-border);
+$index-border: var(--index-container-border);
+$bgColor: var(--color-primary);
+
+
+.container-border {
+    &__line {
+        background-color: $bgColor;
+        position: fixed;
+        z-index: $index-border;
+    }
+
+    &--top {
+        top:0 ;
+        height: $line-width;
+        width: 100%;
+    }
+    
+    &--bottom {
+        bottom:0 ;
+        height: $line-width;
+        width: 100%;
+    }
+
+    &--left {
+        top: 0;
+        left: 0;
+        width: $line-width;
+        height: 100vh;
+    }
+
+    &--right {
+        top: 0;
+        right: 0;
+        width: $line-width;
+        height: 100vh;
+    }
+}

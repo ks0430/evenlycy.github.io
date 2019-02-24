@@ -1,0 +1,20 @@
+@import "../../../sass/abstract/mixins";
+.sub-nav {
+
+  & >:not(:last-child) {
+    margin-right: 4rem;
+  }
+
+  &__item > &__link {
+
+    &:visited,&:link{
+      padding: 0;
+      font-weight: 400;
+    }
+
+    &:hover, &:active {
+      color: currentColor;
+      @include shakeWordAnim(white);
+    }
+  }
+}
