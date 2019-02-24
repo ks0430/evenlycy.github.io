@@ -23,11 +23,9 @@ class Popup extends Component {
                     <p className="popup__type">{ type }</p>
                     <h3 className="popup__title mb-4">{ title }</h3>
                     <p className="popup__text mb-5">{ text }</p>
-                    <Button btnStyle="border" >
-                      <a href={link} target="_blank" data-text="View Project" >
-                        View Project
-                      </a>
-                    </Button>
+                    <a href={link} target="_blank" >
+                      <Button btnStyle="border">View Project</Button>
+                    </a>
                   </div>
                 </div>
               </div>  

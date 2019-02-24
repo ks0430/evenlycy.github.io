@@ -6,8 +6,9 @@ const Button = (props) => {
   const {children, btnStyle, onClick} = props; 
   // get class name
   const classStyle = getBtnStyle(btnStyle);
+  console.log("test",children);
   return (
-    <button className={classStyle} onClick={onClick}>
+    <button className={classStyle}  data-text={children} onClick={onClick}>
       {children}
     </button>
   )

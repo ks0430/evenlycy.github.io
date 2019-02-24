@@ -26,11 +26,9 @@ export default class HeaderNav extends Component {
           <ul className="headerNav ml-auto">
           {this.navs.map(item => 
             <li className="headerNav__item" key={item.path}>
-              <Button 
-                btnStyle={item["style"]}
-              >
-                <Link data-text={item.value} to={item.path}>{item.value}</Link>
-              </Button>
+              <Link data-text={item.value} to={item.path}>
+                <Button btnStyle={ item["style"] }>{ item.value }</Button>
+              </Link>
             </li>
           )}
           </ul>
