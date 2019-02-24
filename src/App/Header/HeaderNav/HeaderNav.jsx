@@ -29,7 +29,7 @@ export default class HeaderNav extends Component {
               <Button 
                 btnStyle={item["style"]}
               >
-                <Link to={item.path}>{item.value}</Link>
+                <Link data-text={item.value} to={item.path}>{item.value}</Link>
               </Button>
             </li>
           )}

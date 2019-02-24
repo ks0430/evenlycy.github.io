@@ -1,3 +1,4 @@
+@import "../../../sass/abstract/mixins";
 $color-text-shadow: var(--color-primary);
 
 .main-title {
@@ -15,27 +16,6 @@ $color-text-shadow: var(--color-primary);
     font-weight: 700;
     position: relative;
 
-    &::before,&::after {
-      content:attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
-      // color: red;
-      clip: rect(0,0,0,0);
-    }
-
-    &::before {
-      left:-2px;
-      text-shadow: 2px 0 $color-text-shadow;
-      animation: shakeWord-2 2s infinite linear alternate-reverse;
-    }
-
-    &::after {
-      left: -2px;
-      text-shadow: -1px 0 $color-text-shadow;
-      animation: shakeWord 2s infinite linear alternate-reverse;
-    }
+    @include shakeWordAnim(white);
   }
 }

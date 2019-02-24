@@ -1,4 +1,5 @@
 $shadow-color: var(--color-yellow-light-1);
+$color-text-shadow: var(--color-primary);
 
 @mixin border($color) {
   border: 1px solid $color;
@@ -22,4 +23,30 @@ $shadow-color: var(--color-yellow-light-1);
   top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+@mixin shakeWordAnim($bgColor) { 
+  position: relative;
+  &::before,&::after {
+  content:attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $bgColor;
+  clip: rect(0,0,0,0);
+}
+
+&::before {
+  left:-2px;
+  text-shadow: 2px 0 $color-text-shadow;
+  animation: shakeWord-2 2s infinite linear alternate-reverse;
+}
+
+&::after {
+  left: -2px;
+  text-shadow: -1px 0 $color-text-shadow;
+  animation: shakeWord 2s infinite linear alternate-reverse;
+}
+
 }

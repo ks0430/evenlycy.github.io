@@ -1,11 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 // Abstract
 @import "abstract/variables";
-@import "abstract/mixins";
-@import "abstract/functions";
 
 // Base
 @import "base/animation";
 @import "base/typography";
 @import "base/utilities";
 @import "base/base";
+
+@import "abstract/mixins";
+@import "abstract/functions";

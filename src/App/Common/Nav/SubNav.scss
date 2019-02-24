@@ -1,3 +1,4 @@
+@import "../../../sass/abstract/mixins";
 .sub-nav {
 
   & >:not(:last-child) {
@@ -13,6 +14,7 @@
 
     &:hover, &:active {
       color: currentColor;
+      @include shakeWordAnim(white);
     }
   }
 }

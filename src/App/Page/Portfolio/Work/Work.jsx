@@ -47,7 +47,7 @@ export default class Work extends Component {
     const {worksData, currentTypeID} = this.state;
 
     const filteredWorksData = currentTypeID === "" ? 
-    worksData:
+    worksData :
     worksData.filter(work => {
       let isExist = work.tags.find(tag => tag.id === currentTypeID)? true : false;
       return isExist;
