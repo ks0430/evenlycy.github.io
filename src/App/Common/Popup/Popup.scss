@@ -1,0 +1,120 @@
+@import "../../../sass/abstract/mixins";
+$index : var(--index-popup);
+$bgColor: var(--color-dark-grey-2);
+
+.popup {
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: $index;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $bgColor;
+    opacity: .8;
+    height: 100%;
+    width: 100%;
+    z-index: calc(#{$index} + 1 );
+  }
+
+  &__body {
+    position: relative;
+    z-index: calc(#{$index} + 2);
+    background-color: white;
+    padding: 1rem;
+    width: 52rem;
+    animation: fadeInDown 400ms;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: none;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;      
+      border-bottom: 2px solid black;
+      transform-origin: center;
+      transform: translate(-50%,-50%) rotate(45deg);
+      width: 35%;
+      transition: all 400ms;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;      
+      border-bottom: 2px solid black;
+      transform-origin: center;
+      transform: translate(-50%,-50%) rotate(-45deg);
+      width: 35%;
+      transition: all 400ms;
+    }
+
+    &:hover {
+      &::after {
+        transform: translate(-50%,-50%) rotate(-135deg);
+      }
+      &::before {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &__img {
+    height: 48rem;
+    width: 100%;
+    object-fit: cover;
+    background-color: #1d1e25;
+
+  }
+  
+  &__content {
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  &__type {
+    text-transform: uppercase;
+    @include underline();
+    display: inline-block;
+    font-size: 1.1rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+
+  &-enter {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    opacity: 1;
+    transition: all 150ms;
+  }
+
+}
+
