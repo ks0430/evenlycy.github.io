@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './Work.scss';
 import SubNav from '../../../Common/Nav/SubNav';
 import SubTitle from '../../../Common/MainTitle/SubTitle';
 import Popup from '../../../Common/Popup/Popup';
 import WorkGrid from './WorkGrid';
 import {getWroks} from '../../../../services/workService';
 import {getTypesData} from '../../../../services/typeService';
+import _ from 'lodash';
+import './Work.scss';
 export default class Work extends Component {
 
   state = {
@@ -13,11 +14,22 @@ export default class Work extends Component {
     typesData:[],
     isPopupOn: false,
     currentWork: "",
-    currentTypeID:""
+    currentTypeIDs:[],
   }
 
-  onClick = (item) => {
-    this.setState({currentTypeID:item.id});
+  onClick = (type) => {
+    const originIDs = this.state.currentTypeIDs;
+    const { id } = type;
+    // If type is all, return empty arr.
+    if(id === "") {
+      this.setState({currentTypeIDs:[]});
+      return;
+    }
+    // Toggle type in currentTypeArr.
+    const currentTypeIDs = originIDs.indexOf(id) < 0 ?  
+                           [...originIDs, id]:
+                           originIDs.filter(item => item !== id);
+    this.setState({currentTypeIDs});
   }
 
   popupToggleHandler = () => {
@@ -35,7 +47,6 @@ export default class Work extends Component {
 
   componentDidMount() {
     const worksData = getWroks();
-    console.log(worksData);
     this.setState({worksData});
 
     const typesData = getTypesData();
@@ -44,36 +55,40 @@ export default class Work extends Component {
   }
 
   getFilteredWorksData = () => {
-    const {worksData, currentTypeID} = this.state;
-
-    const filteredWorksData = currentTypeID === "" ? 
-    worksData :
-    worksData.filter(work => {
-      let isExist = work.tags.find(tag => tag.id === currentTypeID)? true : false;
-      return isExist;
-    })
-
+    const {worksData, currentTypeIDs} = this.state;
+    // If type is all, return origin worksData
+    if(currentTypeIDs.length === 0) return worksData;
+    // If each work contains all current types, filter.
+    const filteredWorksData = worksData.filter(work => {
+        let flag = _.difference(currentTypeIDs, _.map(work.tags,'id') ).length === 0 ? true :false;
+        return flag;
+    }) 
+    // return filteredWorksData;
     return filteredWorksData;
   }
 
 
   render() {
-
-
     // Filter works by current type
     const filteredWorksData = this.getFilteredWorksData();
 
+    const { 
+      currentTypeIDs, 
+      typesData, 
+      isPopupOn, 
+      currentWork
+    } = this.state;
 
     return (
       <div className="work">
         <SubTitle>Recent Works</SubTitle>
-        <SubNav data={this.state.typesData} onClick={this.onClick} />
+        <SubNav data={typesData} currentData={currentTypeIDs} onClick={this.onClick} />
         <WorkGrid 
           filteredWorksData={filteredWorksData} 
           currentWorkToggleHandler={this.currentWorkToggleHandler} 
           popupToggleHandler={this.popupToggleHandler} 
         />
-        <Popup isOn={this.state.isPopupOn} onToggle={this.popupToggleHandler} data={this.state.currentWork} />
+        <Popup isOn={isPopupOn} onToggle={this.popupToggleHandler} data={currentWork} />
       </div>
     )
   }

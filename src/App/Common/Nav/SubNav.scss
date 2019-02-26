@@ -17,4 +17,11 @@
       @include shakeWordAnim(white);
     }
   }
+
+  &__item > &__link--active {
+    &:visited,&:link{
+      font-weight: 700;
+    }
+  }
+
 }
