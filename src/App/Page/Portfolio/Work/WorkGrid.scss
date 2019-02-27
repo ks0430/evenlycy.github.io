@@ -6,30 +6,15 @@ $gridGap: 3rem;
   grid-template-rows: auto;
   grid-column-gap: $gridGap;
   grid-row-gap: $gridGap;
-}
 
-
-.work-grid-anim {
-  transition: all 500ms;
-  &-enter {
-    opacity: 0;
-    transform: translate(-100%);
-  }
-
-  &-enter-active {
-    transform: translate(0);
-    opacity: 1;
-    transition: all 500ms;
-  }
-
-  &-exit {
-    transform: translate(0);
-    opacity: 1;
-  }
-
-  &-exit-active {
-    transform: translate(100%);
-    opacity: 0;
-    transition: all 500ms;
+  &__nothing {
+    height: 20rem;
+    text-align: center;
+    font-size: 5rem;
+    width: 100%;
+    grid-column: 1 / span 3;
   }
 }
+
+
+

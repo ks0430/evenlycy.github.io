@@ -1,0 +1,23 @@
+.react-flip {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+
+  &__item {
+    background-color: azure;
+    position: relative;
+  }
+
+  &__delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    color: white;
+  }
+}
+

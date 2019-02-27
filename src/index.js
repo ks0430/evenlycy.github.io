@@ -9,11 +9,13 @@ import "./sass/main.scss";
 
 // Link for examples
 import ReactTransition from './Examples/ReactTransition/ReactTransition';
+import ReactFlip from './Examples/ReactFlip/ReactFlip';
 
 ReactDOM.render(
     <HashRouter>
         <Switch>
             <Route path="/example" component={ ReactTransition } />
+            <Route path="/flip" component={ ReactFlip } />
             <Route path="/" component={ App } />
         </Switch>
     </HashRouter>, 

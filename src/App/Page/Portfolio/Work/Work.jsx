@@ -59,12 +59,23 @@ export default class Work extends Component {
     // If type is all, return origin worksData
     if(currentTypeIDs.length === 0) return worksData;
     // If each work contains all current types, filter.
-    const filteredWorksData = worksData.filter(work => {
-        let flag = _.difference(currentTypeIDs, _.map(work.tags,'id') ).length === 0 ? true :false;
-        return flag;
-    }) 
+    // const filteredWorksData = worksData.filter(work => {
+    //     let flag = _.difference(currentTypeIDs, _.map(work.tags,'id') ).length === 0 ? true :false;
+    //     return flag;
+    // }) 
+
+    // If each work have at least one tag 
+    const filteredWorksData = worksData.filter(work =>{
+      const newArr = [...currentTypeIDs,..._.map(work.tags,'id')];
+      const length = newArr.length;
+      const uniqLength = _.uniq(newArr).length;
+      return uniqLength < length 
+    }
+    )
+
+    const sortWorksData = _.orderBy(filteredWorksData,item => item.tags.length, ['desc'] );
     // return filteredWorksData;
-    return filteredWorksData;
+    return sortWorksData;
   }
 
 

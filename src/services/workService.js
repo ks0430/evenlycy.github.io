@@ -104,7 +104,7 @@ const worksData = [
       {
         id: "c123f872-3828-11e9-b210-d663bd873d93",
         name: "javascript"
-      },
+      }
     ],
     imgUrl:"https://images.unsplash.com/photo-1522617804560-8454764f1815?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2253&q=80",
     text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
