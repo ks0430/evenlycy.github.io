@@ -8,10 +8,10 @@ export default class All extends Component {
   render() {
     return (
       <React.Fragment>
-        <TransitionExample />
-        <CSSTransitionExample />
+        {/* <TransitionExample />
+        <CSSTransitionExample /> */}
         <TransitionGroupExample />
-        <RouteAnimationExample />
+        {/* <RouteAnimationExample /> */}
       </React.Fragment>
     )
   }

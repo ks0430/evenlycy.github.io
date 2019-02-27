@@ -14,6 +14,7 @@ export default class TransitionGroupExample extends Component {
     ]
   }
 
+  
   deleteHandler = ( id ) => {
     const { items } = this.state;
     const newItems = items.filter( item => item.id !== id );
@@ -21,6 +22,7 @@ export default class TransitionGroupExample extends Component {
   }
 
   render() {
+    console.log("render!");
     const { items } = this.state;
     return (
       <div>
@@ -30,6 +32,8 @@ export default class TransitionGroupExample extends Component {
               key={id}
               timeout={2000}
               classNames="group-item-anim"
+              onExited = {() => console.log(id,"exited")}
+
             >
               <div>
                 <p>{text}</p>
