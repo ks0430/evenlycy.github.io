@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
 $gridGap: 3rem;
 
 .work-grid {
@@ -6,6 +7,11 @@ $gridGap: 3rem;
   grid-template-rows: auto;
   grid-column-gap: $gridGap;
   grid-row-gap: $gridGap;
+
+  @include media-breakpoint-down(sm){
+    grid-template-columns: repeat(1,1fr);
+  }
+
 
   &__nothing {
     height: 20rem;

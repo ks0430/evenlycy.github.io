@@ -1,21 +1,26 @@
 @import "../../../sass/abstract/mixins";
 $color-text-shadow: var(--color-primary);
-
+@import "~bootstrap/scss/bootstrap-grid.scss";
 .main-title {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   // @include border(red);
-
+  @include media-breakpoint-down(sm) {
+    
+  }
   &__title {
     font-size: 7rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-weight: 700;
     position: relative;
-
+    @include media-breakpoint-down(sm) {
+      font-size: 4.3rem;
+      text-align: center;
+    }
     @include shakeWordAnim(white);
   }
 }

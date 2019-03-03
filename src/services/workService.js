@@ -13,9 +13,9 @@ const worksData = [
       }
     ],
     imgUrl:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
-    text:"A music store description. Sed nec ex malesuada, pulvinar mi at, faucibus arcu. Etiam nec ipsum sodales, aliquam arcu at, venenatis felis. Vivamus condimentum turpis enim, sit amet mollis est semper vel. Mauris sem dui.",
-    link:"https://github.com/ks0430/react-music-store",
-    githubLink:"",
+    text:"A music store demo. I developed the front-end using react, User can search music, select music by genres, sort by unique tags, login and register. Tech stack: react, bootstrap4, lodash, jwt. Deployed on github & heroku.",
+    link:"https://cy-music-store-client.herokuapp.com/movies",
+    githubLink:"https://github.com/ks0430/react-music-store",
   },
   {
     id:uuid(),
@@ -32,9 +32,9 @@ const worksData = [
       }
     ],
     imgUrl:"https://images.unsplash.com/photo-1532300481631-0bc14f3b7699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+    text:"A simple weather app. Get weather current & forecast data by city name. Use react, redux, redux-thunk, node.js, express, open weather api. Deployed on github & heroku.",
     link:"https://www.moecoding.com/weather-app-react/",
-    githubLink:""
+    githubLink:"https://github.com/ks0430/weather-app-react"
   },
   {
     id:uuid(),
@@ -47,7 +47,7 @@ const worksData = [
       }
     ],
     imgUrl:vrmainmed,
-    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+    text:"A virtual simulation teaching software. I developed the front-end & assets processing. Tech stack: Unity3D, UGUI, Unity Editor, 3DMax, post processing.",
     link:"https://www.moecoding.com/weather-app-react/",
     githubLink:""
   },
@@ -62,9 +62,9 @@ const worksData = [
       },
     ],
     imgUrl:"https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80",
-    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+    text:"A portfolio theme. Use vanilla javascript, css3, fully responsive and flexible, well animated.",
     link:"https://www.moecoding.com/simple-js-responsive-blog",
-    githubLink:""
+    githubLink:"https://github.com/ks0430/simple-js-responsive-blog"
   },
   {
     id:uuid(),
@@ -77,9 +77,9 @@ const worksData = [
       }
     ],
     imgUrl:"https://images.unsplash.com/photo-1524527459261-54b703ac0fa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+    text:"A tour booking theme. Still in working.",
     link:"https://www.moecoding.com/css-theme-naturo",
-    githubLink:""
+    githubLink:"https://github.com/ks0430/hotel-theme-trillo"
   },
   {
     id:uuid(),
@@ -92,9 +92,9 @@ const worksData = [
       }
     ],
     imgUrl:"https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+    text:"A hotel booking theme. Use react & css3, fully responsive & flexible.",
     link:"https://www.moecoding.com/hotel-theme-trillo/",
-    githubLink:""
+    githubLink:"https://github.com/ks0430/css-theme-naturo"
   },
   {
     id:uuid(),
@@ -107,7 +107,7 @@ const worksData = [
       }
     ],
     imgUrl:"https://images.unsplash.com/photo-1522617804560-8454764f1815?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2253&q=80",
-    text:"A weather app description. Ut leo quam, placerat porta faucibus eu, pulvinar non nisl. Maecenas dictum, risus at cursus elementum, mi lorem posuere tellus, ac viverra felis ligula quis libero. Morbi sollicitudin ac felis vitae tincidunt. ",
+    text:"A pair-up mini web game. Use vanilla javascript. Have fun!",
     link:"https://www.moecoding.com/memmmm/",
     githubLink:"https://github.com/ks0430/memmmm"
   }

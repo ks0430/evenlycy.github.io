@@ -9,7 +9,7 @@ $index-header: var(--index-header);
     top:0;
     width: 100%;
     padding: $gutter;
-    padding-bottom: 0;
+    padding-bottom: $gutter;
     background-color: white;
     z-index: $index-header;
     // @include border(blue);

@@ -12,15 +12,13 @@
       font-weight: 400;
     }
 
-    &:hover, &:active {
-      color: currentColor;
-      @include shakeWordAnim(white);
-    }
   }
 
   &__item > &__link--active {
     &:visited,&:link{
       font-weight: 700;
+      color: currentColor;
+      @include shakeWordAnim(white);
     }
   }
 

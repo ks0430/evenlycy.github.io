@@ -1,8 +1,14 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
 $max-width: var(--width-body-max);
 
 .main-container {
-  max-width: $max-width;
   margin: 0 auto;
+  max-width: $max-width;
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+    padding:  var(--gutter-container);
+  }
 }
 
 .fade {

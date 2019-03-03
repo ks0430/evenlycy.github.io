@@ -1,4 +1,8 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
 .work {
   padding-bottom: 30rem;
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
 }
 

@@ -20,6 +20,8 @@ export default class Work extends Component {
   onClick = (type) => {
     const originIDs = this.state.currentTypeIDs;
     const { id } = type;
+    console.log("test11");
+
     // If type is all, return empty arr.
     if(id === "") {
       this.setState({currentTypeIDs:[]});

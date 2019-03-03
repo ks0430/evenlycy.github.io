@@ -1,4 +1,4 @@
-
+@import "~bootstrap/scss/bootstrap-grid.scss";
 // Color define
 $red_chiaki: #e84a5f;
 $indigo_primary: rgb(49,66,153);
@@ -34,7 +34,14 @@ $width-body-max: 90rem;
     --index-popup: #{$index-3000};
     // gutter & width
     --width-container-border: #{$width-container-border};
+    @include media-breakpoint-down(sm) {
+        --width-container-border: calc(.3 * #{$width-container-border});
+    }
+    // --width-container-border: #{$width-container-border};
     --gutter-container: #{$width-container-border + $gutter-container};
+    @include media-breakpoint-down(lg) {
+        --gutter-container: calc(0.5 * #{$width-container-border + $gutter-container});
+    }
     --width-body-max: #{$width-body-max};
     // color
     --color-light-grey:#{$color-light-grey-221};

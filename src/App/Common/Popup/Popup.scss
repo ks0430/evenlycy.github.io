@@ -1,4 +1,6 @@
 @import "../../../sass/abstract/mixins";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
 $index : var(--index-popup);
 $bgColor: var(--color-dark-grey-2);
 
@@ -32,6 +34,11 @@ $bgColor: var(--color-dark-grey-2);
     padding: 1rem;
     width: 52rem;
     animation: fadeInDown 400ms;
+
+    @include media-breakpoint-down(sm) {
+      width: 80%;
+      height: 80%;
+    }
   }
 
   &__close {
@@ -82,6 +89,9 @@ $bgColor: var(--color-dark-grey-2);
     width: 100%;
     object-fit: cover;
     background-color: #1d1e25;
+    @include media-breakpoint-down(sm) {
+     height: 10rem;
+    }
 
   }
   
@@ -105,6 +115,26 @@ $bgColor: var(--color-dark-grey-2);
 
   &__text {
     line-height: 1.8;
+  }
+
+  &__github {
+    border-radius: 2px;
+    border: 1px solid rgba(27, 31, 35, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .4rem 1rem;
+  }
+
+  &__github-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: rgb(30,30,30);
   }
 
   &-enter {
